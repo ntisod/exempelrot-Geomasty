@@ -11,9 +11,17 @@
 <body>
     
 
-<?php 
-$path ='/Uppgifter-Lista';
-$files = scandir($path);
+<?php
+$arrFiles = array();
+$handle = opendir('C:\wsp1\exempelrot-Geomasty\Uppgifter-Lista');
+ 
+if ($handle) {
+    while (($entry = readdir($handle)) !== FALSE) {
+        $arrFiles[] = $entry;
+    }
+}
+ 
+closedir($handle);
 ?>
 
 
