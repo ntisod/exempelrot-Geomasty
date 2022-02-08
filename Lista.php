@@ -12,7 +12,7 @@
     
 
 <?php 
-$path ="Uppgifter-Lista";
+$path ='/Uppgifter-Lista';
 $files = scandir($path);
 ?>
 
