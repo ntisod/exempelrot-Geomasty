@@ -12,7 +12,7 @@
     
 
 <?php 
-$path ="C:\wsp1\exempelrot-Geomasty\Uppgifter-Lista";
+$path ="Uppgifter-Lista";
 $files = scandir($path);
 ?>
 
