@@ -11,7 +11,7 @@
 
 <?php 
 header("Content-type: text/html; charset=utf-8"); 
-if(empty($_GET[namn])){
+if(empty($_GET['namn'])){
     echo '<h1>Valkommen!</h1>'; 
 } 
 else{ 
