@@ -8,10 +8,7 @@
 </head>
 <body>
     
-
 <?php 
-
-
 
 class Elias 
 {
@@ -46,7 +43,5 @@ endswitch;
 
 ?>
 
-
-
 </body>
-</html>
+</html>             
