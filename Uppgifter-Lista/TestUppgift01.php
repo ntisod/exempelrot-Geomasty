@@ -9,9 +9,6 @@
 <body>
 
 <?php 
-
-
-
 $d = dir(".");
 echo "C:\wsp1\exempelrot-Geomasty\Uppgifter-Lista: " . $d->path . "\n";
 echo "<ul>";
