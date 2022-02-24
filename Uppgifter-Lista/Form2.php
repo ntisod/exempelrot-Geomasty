@@ -3,7 +3,6 @@
 <head>
 <style>
 .error {color: #FF0000;}
-
 *,
         *:before,
         *:after {
@@ -19,12 +18,12 @@
         }
         
          ::-webkit-scrollbar-thumb {
-            background: linear-gradient(13deg, #f9d4ff 14%, #c7ceff 64%);
+            background: linear-gradient(13deg, #a9a9a9 14%, #808080 64%);
             border-radius: 10px;
         }
         
          ::-webkit-scrollbar-thumb:hover {
-            background: linear-gradient(13deg, #c7ceff 14%, #f9d4ff 64%);
+            background: linear-gradient(13deg, #808080 14%, #a9a9a9 64%);
         }
         
          ::-webkit-scrollbar-track {
@@ -36,7 +35,7 @@
         
         h1 {
             font-size: 36px;
-            background: -webkit-linear-gradient(13deg, #c7ceff 14%, #78f5ea 62%);
+            background: -webkit-linear-gradient(13deg, #a9a9a9 14%, #808080 62%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -79,59 +78,38 @@
             margin-bottom: 30px;
         }
         
+        /* This code changes the appearance of the input command */
+        input[type="text"] {
+              width: 200px;
+              display: block;
+              border: 1px;
+              padding: 6px;
+              background-color: #e8eeef;
+       }
+
+       /* This code changes the position of the the follow three types of codes */
         input[type="radio"],
+        input[type="text"],
         input[type="checkbox"] {
             margin: 0 4px 8px 0;
         }
-        /* This code changes the appearance of the select command */
-        
-        select {
-            padding: 6px;
-            height: 32px;
-            border-radius: 2px;
-        }
+
         /* This code changes the appearance of the button command */
-        
         button {
             padding: 19px 39px 18px 39px;
             color: #FFF;
-            background-color: #78f5ea;
+            background-color: #a9a9a9;
             font-size: 18px;
             text-align: center;
             font-style: normal;
             border-radius: 5px;
             width: 100%;
-            border: 1px solid #78f5ea;
+            border: none;
             border-width: 1px 1px 3px;
             box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
             margin-bottom: 10px;
         }
-        /* This code changes the appearance of the fieldset command */
-        
-        fieldset {
-            margin-bottom: 30px;
-            border: none;
-        }
-        /* This code changes the appearance of the legend command */
-        
-        legend {
-            font-size: 1.4em;
-            margin-bottom: 10px;
-        }
-        /* This code changes the appearance of the label command */
-        
-        label {
-            display: block;
-            margin-bottom: 8px;
-        }
-        /* his code changes the appearance of the label choice command */
-        
-        label.CHOICE2 {
-            font-weight: 300;
-            display: inline;
-        }
-        /* This code changes the appearance of the numbers that are displayed in legends / span */
-        
+        /* This code changes the appearance of the numbers that are displayed*/        
         .number {
             background-color: #78f5ea;
             color: #fff;
@@ -162,8 +140,7 @@ $nameErr = $emailErr = $genderErr = $websiteErr = "";
 $name = $email = $gender = $comment = $website = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  if (empty($_POST["name"])) {
-    $nameErr = "Name is required";
+  if (empty($_POST["name"])) { $nameErr = "Name is required";
   } else {
     $name = test_input($_POST["name"]);
     // check if name only contains letters and whitespace
@@ -213,7 +190,7 @@ function test_input($data) {
 }
 ?>
 
-<h1>PHP Form Validation Example</h1>
+<h1>PHP Form Validation Form</h1>
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
   Name: <input type="text" name="name">
   <span class="error">* <?php echo $nameErr;?></span>
@@ -227,25 +204,29 @@ function test_input($data) {
   Comment: <textarea name="comment" rows="5" cols="40"></textarea>
   <br><br>
   Gender:
+  <br>
   <input type="radio" name="gender" value="female">Female
   <input type="radio" name="gender" value="male">Male
   <input type="radio" name="gender" value="other">Other
   <span class="error">* <?php echo $genderErr;?></span>
   <br><br>
-  <input type="submit" name="submit" value="Submit">  
+  <button type="submit" name="submit" value="Submit">  
+    <br>
 </form>
 
 <?php
-echo "<h1>Your Input:</h1>";
-echo "<p> $name </p>";
+echo "Press here to view your Inputs:";
 echo "<br>";
-echo $email;
 echo "<br>";
-echo $website;
+echo "Name: ", $name;
 echo "<br>";
-echo $comment;
+echo "Email: ", $email;
 echo "<br>";
-echo $gender;
+echo "Website Url: ", $website;
+echo "<br>";
+echo "Your Comment: ", $comment;
+echo "<br>";
+echo "Gender: ", $gender;
 ?>
 
 </body>

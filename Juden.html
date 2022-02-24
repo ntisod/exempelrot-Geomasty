@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Ubuntu:400,700');
+    * {
+        box-sizing: border-box;
+    }
+    
+    body {
+        min-height: 100vh;
+        font-family: Ubuntu, sans-serif;
+        margin: 2rem;
+        background-color: hsl(250, 10%, 55%);
+    }
+    
+    .flex {
+        margin: 0;
+        display: flex;
+        border: 5px solid #333;
+        background-color: #fff;
+        margin-bottom: 2rem;
+    }
+    /* optional: alternately flips module layout 
+.flex:nth-child(odd) {
+  flex-direction: row-reverse;
+}
+*/
+    
+    .flex div:first-child {
+        flex: 1;
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .flex:first-of-type div:first-child {
+        background-image: url("https://static.independent.co.uk/2021/12/07/10/PRI213893584.jpg?quality=75&width=982&height=726&auto=webp");
+    }
+    
+    .flex:last-of-type div:first-child {
+        background-image: url("https://static.independent.co.uk/2021/12/07/10/PRI213893584.jpg?quality=75&width=982&height=726&auto=webp");
+    }
+    
+    .flex div:last-child {
+        margin: 2rem;
+        flex: 2;
+    }
+    
+    .flex h3 {
+        font-size: 1.5rem;
+        margin-top: 0;
+        font-weight: 400;
+    }
+    
+    .flex p {
+        font-size: 1rem;
+        line-height: 1.4;
+        font-weight: 400;
+    }
+    
+    .flex p:last-of-type {
+        margin-bottom: 0;
+    }
+    
+    .column {
+        width: 80%;
+        margin: 0 auto;
+        max-width: 700px;
+    }
+    
+    @media all and (max-width: 600px) {
+        body {
+            margin: 0;
+        }
+        .flex div {
+            flex: 1 !important;
+        }
+    }
+    
+    @media all and (max-width: 450px) {
+        h2 {
+            margin: 1rem;
+        }
+        .flex {
+            border: 0;
+            margin: 0;
+            border-bottom: 2px solid #333;
+        }
+        .flex div:last-child {
+            margin: 1rem;
+        }
+        .column {
+            width: 100%;
+        }
+    }
+    
+    @media all and (max-width: 400px) {
+        .flex {
+            flex-direction: column;
+        }
+        .flex div:first-child {
+            min-height: 200px;
+        }
+    }
+</style>
+
+<div class="column">
+    <h2>Judendom</h2>
+    <figure class="flex">
+        <div></div>
+        <div>
+            <h3>Judendom 1</h3>
+            <p>INFO---</p>
+        </div>
+    </figure>
+
+    <figure class="flex">
+        <div></div>
+        <div>
+            <h3>Profeter inom Judendomen</h3>
+            <p>
+                Om profeter!
+            </p>
+            <p>Profeter och profetior är en del av judendomen. Abraham, Isak och Jakob, det judiska folkets förfäder, var profeter. Moses lagens givare ansågs vara den största profeten som någonsin levt. I senare generationer vägledde profeter och profetinnor
+                folket, retade dem när de gjorde fel och tröstade dem när det var tufft. Talmud berättar att det fanns 48 profeter och sju profetinnor av det judiska folket. Nu kvalificerar Talmud att det fanns många fler profeter.</p>
+            <br>
+            <p>Abraham (1) </p>
+            <p>
+
+            </p>
+        </div>
+    </figure>
+</div>
+
+</body>
+
+</html>
