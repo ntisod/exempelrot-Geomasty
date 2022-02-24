@@ -3,6 +3,7 @@
 <head>
 <style>
 .error {color: #FF0000;}
+body {background-color: #484848;}
 *,
         *:before,
         *:after {
@@ -31,22 +32,22 @@
             border-radius: 10px;
             box-shadow: inset 7px 10px 12px #f0f0f0;
         }
+
         /* h1 style (design) */
-        
         h1 {
             font-size: 36px;
             background: -webkit-linear-gradient(13deg, #a9a9a9 14%, #808080 62%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
+
         /* This code changes the appearance of the body (the page itself) */
-        
         body {
             font-family: 'Nunito', sans-serif;
             color: #384047;
         }
+
         /* This code changes the appearance of the form */
-        
         form {
             max-width: 300px;
             margin: 10px auto;
@@ -54,14 +55,18 @@
             background: #f4f7f8;
             border-radius: 8px;
         }
+
         /* This code changes the appearance of h1 */
-        
         h1 {
             margin: 0 0 30px 0;
             text-align: center;
         }
+
+        p3 {
+          color: black;
+        }
+
         /* This code changes the appearance / placment of the area where everything is displayed */
-        
         textarea,
         select {
             background: rgba(255, 255, 255, 0.1);
@@ -80,7 +85,7 @@
         
         /* This code changes the appearance of the input command */
         input[type="text"] {
-              width: 200px;
+              width: 440px;
               display: block;
               border: 1px;
               padding: 6px;
@@ -89,9 +94,18 @@
 
        /* This code changes the position of the the follow three types of codes */
         input[type="radio"],
-        input[type="text"],
         input[type="checkbox"] {
             margin: 0 4px 8px 0;
+          
+        }
+
+        img {
+        margin: 100px right;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+
         }
 
         /* This code changes the appearance of the button command */
@@ -109,6 +123,7 @@
             box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
             margin-bottom: 10px;
         }
+
         /* This code changes the appearance of the numbers that are displayed*/        
         .number {
             background-color: #78f5ea;
@@ -123,12 +138,40 @@
             text-shadow: 0 1px 0 rgba(255, 255, 255, 0.2);
             border-radius: 100%;
         }
+
+        input[type='radio'] {
+         width:15px;
+         height:15px;
+         border:10px solid darkgray;
+         border-radius:50%;
+         outline:10px black;
+        }
+
+        input[type='radio']:hover {
+          box-shadow:0 0 5px 0px #e8eeef inset;
+        }
+
+        input[type='radio']:before {
+          content:'';
+          display:block;
+          width:100%;
+          height:100%;
+          margin:auto;    
+          border-radius:50%;    
+          background: #dcdcdc 15px;
+        }
+
+        input[type='radio']:checked:before {
+          background:grey;
+        }
+
+
         /* This code changes the placment of the application on screen */
-        
         @media screen and (min-width: 480px) {
             form {
                 max-width: 480px;
             }
+            
         }
 </style>
 </head>
@@ -192,30 +235,32 @@ function test_input($data) {
 
 <h1>PHP Form Validation Form</h1>
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
-  Name: <input type="text" name="name">
-  <span class="error">* <?php echo $nameErr;?></span>
+<div class="img-box">
+<img src="https://register.pravasikerala.org/public/images/avatar5.png" alt="Avatar" style="width:200px">
+</div>
+<br>
+  Name: <span class="error">* <?php echo $nameErr;?></span> <input type="text" name="name">
   <br><br>
-  E-mail: <input type="text" name="email">
-  <span class="error">* <?php echo $emailErr;?></span>
+  E-mail: <span class="error">* <?php echo $emailErr;?></span> <input type="text" name="email">
   <br><br>
-  Website: <input type="text" name="website">
-  <span class="error"><?php echo $websiteErr;?></span>
+  Website: <span class="error"><?php echo $websiteErr;?></span> <input type="text" name="website">
   <br><br>
   Comment: <textarea name="comment" rows="5" cols="40"></textarea>
   <br><br>
   Gender:
   <br>
-  <input type="radio" name="gender" value="female">Female
-  <input type="radio" name="gender" value="male">Male
-  <input type="radio" name="gender" value="other">Other
+  <div>
+  <input type="radio" name="gender" value="female">Female <label for="colour-green" ></label>
+  <input type="radio" name="gender" value="male">Male <label for="colour-red" ></label>
+  <input type="radio" name="gender" value="other">Other <label for="colour-blue" ></label>
   <span class="error">* <?php echo $genderErr;?></span>
+</div>
   <br><br>
   <button type="submit" name="submit" value="Submit">  
-    <br>
 </form>
 
 <?php
-echo "Press here to view your Inputs:";
+echo "<p3> Press here to view your Inputs: </p3>";
 echo "<br>";
 echo "<br>";
 echo "Name: ", $name;
