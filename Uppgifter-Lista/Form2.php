@@ -63,7 +63,7 @@ body {background-color: #484848;}
         }
 
         p3 {
-          color: black;
+          color: darkslategrey;
         }
 
         /* This code changes the appearance / placment of the area where everything is displayed */
