@@ -12,7 +12,6 @@ body {background-color: #484848;}
             box-sizing: border-box;
         }
         /* This is a scrollbar design */
-        
          ::-webkit-scrollbar {
             width: 13px;
             height: 13px;
