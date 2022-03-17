@@ -29,7 +29,15 @@ try {
   $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
   $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-  $stmt = $conn->prepare("SELECT id, name, score, time FROM scores ORDER BY -score");
+    $sql = "INSERT INTO scoreinsert (name, score, time)
+    VALUES ('Inserted-Name', '100', '2022-03-15 12:09:40')";
+    // use exec() because no results are returned
+    $conn->exec($sql);
+    echo "New record created successfully";
+
+
+
+  $stmt = $conn->prepare("SELECT id, name, score, time FROM scoreinsert ORDER BY -score");
   $stmt->execute();
 
   // set the resulting array to associative
