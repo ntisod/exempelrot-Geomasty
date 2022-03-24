@@ -23,7 +23,7 @@ class TableRows extends RecursiveIteratorIterator {
 $servername = "localhost";
 $username = "PHP-User";
 $password = "2ZAziG(353pFML";
-$dbname = "vsp1ex";
+$dbname = "contactme";
 
 try {
   $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
