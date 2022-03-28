@@ -200,8 +200,7 @@ body {background-color: darkcyan;}
         }
 </style>
 </head>
-<body>  
-    
+<body>   
 
 <?php
 define('BASEPATH', true); //access connection script if you omit this line file will be blank
@@ -277,5 +276,4 @@ function myFunction() {
   }
 }
 </script>
-
  </html>
