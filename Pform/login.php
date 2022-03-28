@@ -40,6 +40,14 @@ body {background-color: #006610;}
             -webkit-text-fill-color: transparent;
         }
 
+        /* p1 style (design) */
+        p1 {
+            font-size: 14px;
+            background: -webkit-linear-gradient(13deg, #a9a9a9 14%, #808080 62%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
         /* This code changes the appearance of the body (the page itself) */
         body {
             font-family: 'Nunito', sans-serif;
@@ -253,8 +261,21 @@ if(isset($_POST['submit'])){
 <form action="login.php" method="post">                          
  <input type="text" name="username" placeholder="Username">
  <br>
- <input type="password" name="password" placeholder="Password">   
+ <input type="checkbox" onclick="myFunction()"><p1>Show password</p1>
+ <input type="password" name="password" placeholder="Password" id="Pw">   
  <br><br> 
  <button name="submit" type="submit">sign in</button>
  </form>
+
+ <script>
+function myFunction() {
+  var x = document.getElementById("Pw");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+</script>
+
  </html>

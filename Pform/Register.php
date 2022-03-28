@@ -32,6 +32,14 @@ body {background-color: #484848;}
             box-shadow: inset 7px 10px 12px #f0f0f0;
         }
 
+        /* p1 style (design) */
+        p1 {
+            font-size: 14px;
+            background: -webkit-linear-gradient(13deg, #a9a9a9 14%, #808080 62%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
         /* h1 style (design) */
         h1 {
             font-size: 36px;
@@ -156,7 +164,7 @@ body {background-color: #484848;}
             border-radius: 100%;
         }
 
-        input[type='radio'] {
+        input[type='checkbox'] {
          width:15px;
          height:15px;
          border:10px solid darkgray;
@@ -164,11 +172,11 @@ body {background-color: #484848;}
          outline:10px black;
         }
 
-        input[type='radio']:hover {
+        input[type='checkbox']:hover {
           box-shadow:0 0 5px 0px #e8eeef inset;
         }
 
-        input[type='radio']:before {
+        input[type='checkbox']:before {
           content:'';
           display:block;
           width:100%;
@@ -178,10 +186,9 @@ body {background-color: #484848;}
           background: #dcdcdc 15px;
         }
 
-        input[type='radio']:checked:before {
+        input[type='checkbox']:checked:before {
           background:grey;
         }
-
 
         /* This code changes the placment of the application on screen */
         @media screen and (min-width: 480px) {
@@ -257,9 +264,21 @@ require 'db.php';
   <br>
   <input required="required" type="email" name="email" placeholder="Email">
   <br>
-  <input required="required" type="password" name="password" placeholder="Password">   
+  <input type="checkbox" onclick="myFunction()"><p1>Show password</p1>
+  <input required="required" type="password" name="password" placeholder="Password" id="Pw">   
   <br> <br>               
   <button name="submit" type="submit">Register</button>
   </form>
   
+  <script>
+function myFunction() {
+  var x = document.getElementById("Pw");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+</script>
+
   </html>
