@@ -3,7 +3,7 @@
 <head>
 <style>
 .error {color: #FF0000;}
-body {background-color: #006610;}
+body {background-color: darkcyan;}
 *,
         *:before,
         *:after {
@@ -137,7 +137,7 @@ body {background-color: #006610;}
         button {
             padding: 19px 39px 18px 39px;
             color: #FFF;
-            background-color: #006610;
+            background-color: darkcyan;
             font-size: 18px;
             text-align: center;
             font-style: normal;
@@ -164,7 +164,7 @@ body {background-color: #006610;}
             border-radius: 100%;
         }
 
-        input[type='radio'] {
+        input[type='checkbox'] {
          width:15px;
          height:15px;
          border:10px solid darkgray;
@@ -172,11 +172,11 @@ body {background-color: #006610;}
          outline:10px black;
         }
 
-        input[type='radio']:hover {
+        input[type='checkbox']:hover {
           box-shadow:0 0 5px 0px #e8eeef inset;
         }
 
-        input[type='radio']:before {
+        input[type='checkbox']:before {
           content:'';
           display:block;
           width:100%;
@@ -186,8 +186,8 @@ body {background-color: #006610;}
           background: #dcdcdc 15px;
         }
 
-        input[type='radio']:checked:before {
-          background:grey;
+        input[type='checkbox']:checked:before {
+          background:darkcyan;
         }
 
 
@@ -256,7 +256,7 @@ if(isset($_POST['submit'])){
 
 <form action="login.php" method="post">
 <div class="img-box">
-<img src="https://icones.pro/wp-content/uploads/2021/02/icone-utilisateur-vert.png" alt="Avatar" style="width:200px">
+<img src="https://i.ibb.co/k4mGz9g/Dark-Cyan-Pic-removebg-preview.png" alt="Avatar" style="width:200px">
 </div>
 <form action="login.php" method="post">                          
  <input type="text" name="username" placeholder="Username">
