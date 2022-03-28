@@ -193,7 +193,7 @@ body {background-color: #006610;}
 </style>
 </head>
 <body>  
-    </html>
+    
 
 <?php
 define('BASEPATH', true); //access connection script if you omit this line file will be blank
@@ -257,3 +257,4 @@ if(isset($_POST['submit'])){
  <br><br> 
  <button name="submit" type="submit">sign in</button>
  </form>
+ </html>

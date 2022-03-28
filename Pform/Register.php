@@ -248,7 +248,6 @@ require 'db.php';
      }    
 ?>
 
-
 <form action="register.php" method="post">
 <div class="img-box">
 <img src="https://register.pravasikerala.org/public/images/avatar5.png" alt="Avatar" style="width:200px">
