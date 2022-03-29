@@ -203,7 +203,7 @@ body {background-color: #484848;}
 
 <?php
 define('BASEPATH', true);
-require 'db.php'; 
+require('../Pform/db.php'); 
 
  if(isset($_POST['submit'])){  
         try {

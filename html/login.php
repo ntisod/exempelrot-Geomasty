@@ -204,7 +204,7 @@ body {background-color: darkcyan;}
 
 <?php
 define('BASEPATH', true); //access connection script if you omit this line file will be blank
-require 'db.php'; //require connection script
+require('../Pform/db.php'); //require connection script
 
 if(isset($_POST['submit'])){  
         // try {
