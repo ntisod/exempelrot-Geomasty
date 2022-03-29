@@ -43,7 +43,7 @@ body {background-color: darkcyan;}
         /* p1 style (design) */
         p1 {
             font-size: 14px;
-            background: -webkit-linear-gradient(13deg, #a9a9a9 14%, #808080 62%);
+            background: -webkit-linear-gradient(13deg, #008b8b  14%, #006f6f 62%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
