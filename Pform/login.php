@@ -230,7 +230,7 @@ if(isset($_POST['submit'])){
     
     //If $row is false statement.
     if($user === false){
-       echo '<script>alert("invalid username or password")</script>';
+       echo '<script>alert("invalid username")</script>';
     } else{
          
         //Compare and decrypt passwords.
@@ -247,7 +247,7 @@ if(isset($_POST['submit'])){
             
         } else{
             //If password false, then print this message..
-            echo '<script>alert("invalid username or password")</script>';
+            echo '<script>alert("invalid password")</script>';
         }
     }
     }
