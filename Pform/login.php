@@ -260,15 +260,15 @@ if(isset($_POST['submit'])){
 <form action="login.php" method="post">                          
  <input type="text" name="username" placeholder="Username">
  <br>
- <input type="checkbox" onclick="myFunction()"><p1>Show password</p1>
- <input type="password" name="password" placeholder="Password" id="Pw">   
+ <input type="checkbox" onclick="ShowPasswordFunction()"><p1>Show password</p1>
+ <input type="password" name="password" placeholder="Password" id="ShowPassword">   
  <br><br> 
  <button name="submit" type="submit">sign in</button>
  </form>
 
  <script>
-function myFunction() {
-  var x = document.getElementById("Pw");
+function ShowPasswordFunction() {
+  var x = document.getElementById("ShowPassword");
   if (x.type === "password") {
     x.type = "text";
   } else {
