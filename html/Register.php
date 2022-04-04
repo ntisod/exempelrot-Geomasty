@@ -134,7 +134,7 @@ body {background-color: #484848;}
         }
 
         /* This code changes the appearance of the button command */
-        button {
+        button {  
             padding: 19px 39px 18px 39px;
             color: #FFF;
             background-color: #a9a9a9;

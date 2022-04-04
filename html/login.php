@@ -265,7 +265,6 @@ if(isset($_POST['submit'])){
  <br><br> 
  <button name="submit" type="submit">sign in</button>
  </form>
-
  <script>
 function ShowPasswordFunction() {
   var x = document.getElementById("ShowPassword");
