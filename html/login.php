@@ -76,17 +76,24 @@ if(isset($_POST['submit'])){
 ?>
 
 <form action="login.php" method="post">
+ <!-- Image box: -->
 <div class="img-box">
 <img src="https://i.ibb.co/k4mGz9g/Dark-Cyan-Pic-removebg-preview.png" alt="Avatar" style="width:200px">
 </div>
-<form action="login.php" method="post">                          
+<form action="login.php" method="post">             
+<!-- Username text box + type, name and placeholder -->
  <input type="text" name="username" placeholder="Username">
  <br>
+ <!-- Showpassword button -->
  <input type="checkbox" onclick="ShowPasswordFunction()"><p1>Show password</p1>
+<!-- Password text box + type, name, id and placeholder -->
  <input type="password" name="password" placeholder="Password" id="ShowPassword">   
  <br><br> 
+<!-- Sign in / login button -->
  <button name="submit" type="submit">sign in</button>
  </form>
+
+ <!-- The script section is used to show password  -->
  <script>
 function ShowPasswordFunction() {
   var x = document.getElementById("ShowPassword");
