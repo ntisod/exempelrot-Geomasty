@@ -82,7 +82,7 @@ require('../Pform/db.php');
 <img src="https://i.ibb.co/MVLXwKS/imgonline-com-ua-Replace-Color-z-Jjn-Z4ki4x-Y1-removebg-preview.png" alt="Avatar" style="width:200px">
 </div>
 <br>
-  <!-- Username text box + values -->
+  <!-- Username text box + type, required, name and placeholder -->
   <input type="text" required="required" name="username" placeholder="Username">
   <br>
   <!-- Email text box + values -->
@@ -90,10 +90,10 @@ require('../Pform/db.php');
   <br>
   <!-- Showpassword button -->
   <input type="checkbox" onclick="ShowPasswordFunction()"><p1>Show password</p1>
-  <!-- Password text box + values -->
+  <!-- Password text box + value, type, name, id and placeholder -->
   <input required="required" type="password" name="password" placeholder="Password" id="ShowPassword">   
   <br> <br>      
-  <!-- Submit button -->         
+  <!-- Register button -->         
   <button name="submit" type="submit">Register</button>
   </form>
   
