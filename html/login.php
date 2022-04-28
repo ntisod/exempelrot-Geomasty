@@ -10,6 +10,7 @@
 <body>   
 
 <?php
+$Min=60;
 define('BASEPATH', true); //access connection script if you omit this line file will be blank
 require('../Pform/db.php'); //require connection script
 
@@ -18,7 +19,7 @@ if(isset($_POST['submit'])){
             $dsn = new PDO("mysql:host=$host;dbname=$dbname", $user, $password);
             $dsn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    //ensure fields are not empty
+    //Forgot this code's function, i will come back to it.
     $username = !empty($_POST['username']) ? trim($_POST['username']) : null;
     $passwordAttempt = !empty($_POST['password']) ? trim($_POST['password']) : null;
     
@@ -58,8 +59,8 @@ if(isset($_POST['submit'])){
            if ($v1 == $v3 && $v2 == $v4) {
                $_SESSION['luser'] = $v1;
                $_SESSION['start'] = time(); // Taking now logged in time.
-               // Ending a session in 30 minutes from the starting time.
-               $_SESSION['expire'] = $_SESSION['start'] + (1 * 60);
+               // Ending a session in 1 minutes from the starting time.
+               $_SESSION['expire'] = $_SESSION['start'] + (1 * $Min);
                echo '<script>window.location.replace("http://localhost:8080/html/homepage.php");</script>';
            } else {
                echo "Please enter the username or password again!";

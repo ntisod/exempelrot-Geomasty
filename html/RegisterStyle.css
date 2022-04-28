@@ -1,6 +1,11 @@
+/* Error color */
+
 .error {
     color: #FF0000;
 }
+
+
+/* Body background color */
 
 body {
     background-color: #484848;
