@@ -36,7 +36,7 @@ if(isset($_POST['submit'])){
     //Fetches information.
     $user = $stmt->fetch(PDO::FETCH_ASSOC);
         
-    //If $row is false statement.
+    //If $row is false statement. If fetching user went wrong.
     if($user === false){
        echo '<script>alert("invalid username")</script>';
     } else{
@@ -50,7 +50,7 @@ if(isset($_POST['submit'])){
             //Re-directs user.
              
             $_SESSION['admin'] = $username;
-           //Removed something here temporaraly (Do not tinker with stupid u stupid elias, u will ruin it.)
+           //Removed something here temporaraly (Do not tinker with this u stupid elias, u will ruin it.)
 
            $v1 = $_POST['username'];
            $v2 = $_POST['password'];
@@ -61,7 +61,7 @@ if(isset($_POST['submit'])){
                $_SESSION['start'] = time(); // Taking now logged in time.
                // Ending a session in 1 minutes from the starting time.
                $_SESSION['expire'] = $_SESSION['start'] + (1 * $Min);
-               echo '<script>window.location.replace("http://localhost:8080/html/homepage.php");</script>';
+               echo '<script>window.location.replace("index.php");</script>';
            } else {
                echo "Please enter the username or password again!";
            }

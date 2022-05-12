@@ -6,6 +6,8 @@ $password = '2ZAziG(353pFML';
 $dbname = 'vsp1ex'; 
 $dsn = '';
 
+//7bIRcqSyQPSZ
+
 try{
     $dsn = 'mysql:host='.$host. ';dbname='.$dbname;
 
